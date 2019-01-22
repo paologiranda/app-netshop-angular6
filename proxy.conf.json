@@ -1,0 +1,1 @@
+{"/todos":{"target":"https://jsonplaceholder.typicode.com/","secure":false,"changeOrigin":true,"logLevel":"debug"},"/state":{"target":"http://services.groupkt.com/","secure":false,"changeOrigin":true,"logLevel":"debug"}}

@@ -1,0 +1,50 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">{{ product.key ? 'Update Product' : 'Add product' }}</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<form [formGroup]="addProductForm">
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-5">
+        <mat-form-field>
+          <input matInput placeholder="Name of product" formControlName="name">
+        </mat-form-field>
+      </div>
+      <div class="col-5">
+        <mat-form-field>
+          <input matInput placeholder="Price of product" formControlName="price">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <mat-form-field>
+          <mat-select placeholder="Presente" formControlName="is_present">
+            <mat-option value="yes">YES</mat-option>
+            <mat-option value="no">NO</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <div class="row">
+      <div class="col-2">
+      </div>
+      <div class="col-1">
+      </div>
+      <div class="col-3">
+        <div class="add-button-row">
+          <button mat-raised-button
+                  color="primary"
+                  (click)="saveProduct()">
+            Save Product
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</form>
